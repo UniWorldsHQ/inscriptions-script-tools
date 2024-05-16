@@ -14,7 +14,7 @@ export async function collectionInscriptions() {
   const changeCount = 1;
   let inputs = 0;
   let outputs = changeCount;
-  const network = collection_config.network ? networks.testnet : networks.bitcoin;
+  const network = collection_config.network == "testnet" ? networks.testnet : networks.bitcoin;
   const psbt = new Psbt({network});
 
   const signers = [];

@@ -11,7 +11,7 @@ import {collection_config} from "../config";
 const tinysecp: TinySecp256k1Interface = require('tiny-secp256k1');
 initEccLib(tinysecp as any);
 const ECPair: ECPairAPI = ECPairFactory(tinysecp);
-const network = collection_config.network ? networks.testnet : networks.bitcoin;
+const network = collection_config.network == "testnet" ? networks.testnet : networks.bitcoin;
 
 export function buildWalletInfo(wifKey: string) {
   const keyPair = ECPair.fromWIF(wifKey, network)

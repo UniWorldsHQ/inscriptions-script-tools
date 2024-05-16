@@ -3,7 +3,7 @@ import {collection_config} from "../config";
 
 let unisatClient: any;
 let mempoolClient: any;
-if (collection_config.network) {
+if (collection_config.network == "testnet") {
   unisatClient = new axios.Axios({
     baseURL: `https://open-api-testnet.unisat.io`
   });

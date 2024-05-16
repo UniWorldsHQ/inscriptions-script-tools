@@ -1,7 +1,8 @@
 export const collection_config = {
   unisatApikey: "",
   feeRate: 13,
-  // network: "",
+  // livenet or testnet
+  network: "livenet",
   // payment wallet wifkey
   wifKey: "",
   // payment wallet address
