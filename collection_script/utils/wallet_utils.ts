@@ -15,7 +15,7 @@ const network = collection_config.network == "testnet" ? networks.testnet : netw
 
 export function buildWalletInfo(wifKey: string) {
   const keyPair = ECPair.fromWIF(wifKey, network)
-  // Tweak the original keypair
+  // Tweak the original key pair
   const tweakedSigner = tweakSigner(keyPair, { network });
   const p2tr = payments.p2tr({
     pubkey: toXOnly(tweakedSigner.publicKey),
